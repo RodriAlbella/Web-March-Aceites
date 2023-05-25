@@ -7,6 +7,9 @@
   font-family: "Varela Round", sans-serif;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 
 /* estilo index */
 
@@ -21,6 +24,13 @@ header .banner {
   align-items: center;
   gap: 100px;
 }
+.abrir-menu {
+  display: none;
+}
+.cerrar-menu {
+  display: none;
+}
+
 header .img-fondo {
   width: 100%;
   height: 100%;
@@ -81,6 +91,7 @@ main p {
   text-align: center;
   margin-left: 7rem;
   margin-right: 7rem;
+  padding: 3rem;
 }
 
 section {
@@ -96,7 +107,7 @@ section ul {
   padding: 1.3rem;
   justify-content: center;
   font-size: 20px;
-  background-color: #ecf8f8;
+  background-color: #ececec;
 }
 
 section ul li {
@@ -108,7 +119,6 @@ section ul li {
   padding-right: 3rem;
   font-size: 15px;
   height: 30px;
-  /* margin-top: 2.5rem; */
 }
 
 section h3 {
@@ -119,14 +129,13 @@ section h3 {
 article {
   display: flex;
   height: 100px;
-
   justify-content: center;
   align-items: center;
   gap: 270px;
   background-image: linear-gradient(
     to bottom,
     rgb(255, 255, 255),
-    rgb(183, 242, 251)
+    rgb(231, 231, 231)
   );
 }
 
@@ -194,13 +203,14 @@ h3 {
 }
 .contenedor .producto {
   width: 400px;
-  margin: 12px;
+  margin: 10px;
+  padding: 30px;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  background: #f6fff8;
+  background: #ececec;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   transition: all 400ms ease;
 }
@@ -246,14 +256,31 @@ h3 {
 /* estilos contenido secundario */
 
 .section-3 {
-  width: 700px;
-  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  padding: 2.5rem;
+
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin: 4rem 1.5rem 4rem 0;
 }
 
-.section-4 {
-  width: 700px;
-  height: 400px;
-  display: grid;
+.section-3 aside {
+  text-align: start;
+  margin-top: 100px;
+}
+.section-3 aside p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+}
+.section-3 aside p a {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+  text-decoration: none;
+  color: black;
 }
 
 /* estilos pie de pagina */
@@ -263,8 +290,6 @@ footer {
   justify-content: space-around;
   font-size: small;
   border: 1px solid #fff;
-  margin-left: 100px;
-  margin-right: 0%;
 }
 
 /* estilos "punto de venta */
@@ -383,56 +408,167 @@ input {
   padding: 0;
   box-sizing: border-box;
 }
-@media (max-width: 1024px) {
+
+/* media queries para celular */
+@media screen and (max-width: 550px) {
+  /* estilos index */
   header .banner {
-    background-color: black;
     display: grid;
-    grid-template-areas:
-      "banner img banner img"
-      "banner nav banner nav"
-      "banner icon banner icon";
-    gap: 20px;
-    padding: 0.7rem;
-  }
-  .banner img {
-    grid-area: banner img;
-    background-color: black;
-    height: 13vh;
-    width: 13vh;
-    justify-self: center;
+    grid-template-areas: ".abrir-menu img .icon";
   }
 
-  .banner nav {
-    background-color: black;
-    grid-area: banner nav;
-    margin: 0%;
+  header .banner nav {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.2);
   }
-  header nav ul {
-    background-color: black;
-    font-size: small;
-    margin: 0;
+  header .banner nav ul {
+    flex-direction: column;
+    align-items: end;
+  }
+  .abrir-menu {
+    grid-area: abrir-menu;
+  }
+  header .bannerimg {
+    grid-area: img;
+  }
+  .icon {
+    grid-area: icon;
+    display: flex;
+  }
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+  }
+  .abrir-menu {
+    color: white;
+  }
+  .cerrar-menu {
+    color: #1c1c1c;
   }
 
-  .banner .icon {
-    background-color: black;
-    grid-area: banner icon;
-    text-align: center;
+  header .banner nav li {
+    color: #ecececec;
   }
-
-  section {
-    display: grid;
-  }
-  section h3 {
-    text-align: start;
-    margin-left: 3rem;
+  main p {
+    padding: 0;
+    text-align: justify;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    padding: 1rem;
   }
 
   section ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr, 1fr, none;
+    flex-direction: column;
+    align-items: center;
   }
   section ul li {
-    height: 100%;
+    align-items: center;
+    height: auto;
+    width: 200px;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  article {
+    margin-top: 5rem;
+
+    flex-direction: column;
+    height: auto;
+    gap: 5px;
+    align-items: start;
+    padding: 15px;
+  }
+  .section-2 {
+    flex-direction: column;
+    padding: 0.5rem;
+    align-items: center;
+  }
+  .section-2 #carouselExampleRide {
+    height: 100vh;
+    width: auto;
+  }
+  .section-2 img {
+    width: auto;
+    height: 100vh;
+    margin: auto;
+  }
+
+  .correo {
+    display: grid;
+    grid-template-areas:
+      "correo-1"
+      "button";
+    gap: 10px;
+    margin: 0;
+    height: auto;
+    padding: 1.2rem;
+  }
+  .correo .correo-1 {
+    grid-area: correo-1;
+    font-size: medium;
+    margin: 0rem;
+    padding: 0rem;
+  }
+  .correo button {
+    display: none;
+  }
+
+  /* estilos para producto */
+
+  .titulo-catalogo {
+    text-align: justify;
+  }
+  .titulo-catalogo h2 {
+    font-size: 200;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedor .producto {
+    width: auto;
+    gap: 10px;
+    margin: 20px;
+    padding: 15px;
+    flex-direction: row;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .contenedor .producto img {
+    width: 110px;
+    height: 110px;
+  }
+  .contenedor .producto .contenido p {
+    text-align: start;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .section-3 {
+    margin: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .section-3 aside {
+    margin-top: 30px;
+  }
+  .section-3 aside p a {
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
   }
 }
+
