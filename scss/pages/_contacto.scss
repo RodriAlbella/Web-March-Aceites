@@ -1,0 +1,104 @@
+// import
+@import "scss/variables/vars";
+
+main {
+  .contacto {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    margin-top: 90px;
+    form {
+      input,
+      #mensaje {
+        width: 100%;
+        padding: 15px 10px;
+        font-size: 15px;
+        border: 1px solid black;
+        margin-bottom: 20px;
+        border-radius: 0.8rem;
+        outline: 0px;
+      }
+      .text-area {
+        max-width: 530px;
+        min-width: 530px;
+        min-height: 140px;
+        max-height: 150px;
+      }
+      .btn-enviar {
+        max-width: 100px;
+        min-height: 20px;
+        padding: 0.5rem;
+        font-size: 16px;
+        outline: 0px;
+        background-color: #84a59daa;
+        color: white;
+        border-radius: 0.4rem;
+        transition: all 300ms ease;
+      }
+      .btn-enviar:hover {
+        background-color: #84a59dea;
+      }
+    }
+    .redes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+      margin-bottom: 5px;
+      h2 {
+        margin: 0.2rem;
+        font-size: 30px;
+        text-align: center;
+      }
+      .p-redes {
+        font-size: 17px;
+        line-height: 1.6;
+        margin: 2px;
+        padding: 0.8rem;
+        text-align: start;
+      }
+      .facebook,
+      .instagram,
+      .gmail,
+      .whatsapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: auto;
+        margin-right: 1rem;
+        border-radius: 10px;
+        background-color: #ccc;
+        color: #fff;
+        transition: background-color 0.3s ease-in-out;
+        gap: 14px;
+        a {
+          background-color: #ccc;
+          color: #fff;
+          transition: background-color 0.3s ease-in-out;
+          text-decoration: none;
+        }
+        i {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+// estilos para tablet
+
+@media screen and (max-width: 768px) {
+  main {
+    .contacto {
+      
+      max-width: 90vh;
+      
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

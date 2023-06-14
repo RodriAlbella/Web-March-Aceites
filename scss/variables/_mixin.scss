@@ -1,0 +1,18 @@
+// mixin
+
+// mixin con parametros, se puede trabajar con paginas o etiquetas.
+
+@mixin productos ($with, $height, $padding) {
+  width: $with;
+  margin: $height;
+  padding: $padding;
+}
+
+// mixin sin parametros
+
+@mixin flex {
+    display: $display-principal;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

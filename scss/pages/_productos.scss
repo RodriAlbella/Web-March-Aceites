@@ -1,0 +1,105 @@
+// import
+@import "../variables/vars";
+@import "../variables/mixin";
+
+/* estilos de "producto.html" */
+/* titulo principal */
+
+*{
+  font-family: $font-principal;
+}
+
+main {
+  .titulo-catalogo {
+    text-align: center;
+    margin: 2rem;
+    overflow-x: hidden;
+  }
+  h3 {
+    text-align: center;
+    margin: 20px;
+    font-family: sans-serif;
+  }
+  p {
+    font-size:x-large;
+  }
+  .contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    .producto {
+      @include productos(300px, 10px, 1px);
+      border-radius: 6px;
+      @include flex;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      overflow: hidden;
+      background: #83c5c042;
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+      transition: all 400ms ease;
+      .contenido {
+        padding: 2px;
+        text-align: center;
+        h4 {
+          // font-size: x-large;
+          margin-bottom: 15px;
+        }
+        p {
+          color: #6a6a6a;
+          margin: 1.5px;
+          padding: 0;
+          line-height: 1.5;
+          font-size: medium;
+        }
+      }
+      a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 10px;
+        color: #10282c;
+        border: 1px solid #10282c;
+        border-radius: 4px;
+      }
+      .producto a:hover {
+        background-color: #10282c;
+        color: #fff;
+      }
+    }
+    .producto:hover {
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    }
+    .producto img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+/* estilos contenido secundario */
+.section-3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  padding: 2.5rem;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin: 4rem 1.5rem 4rem 0;
+  aside {
+    text-align: start;
+    margin-top: 100px;
+    p {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: large;
+      a {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: large;
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
