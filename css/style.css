@@ -506,6 +506,53 @@ main .puntos {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.15rem; }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  background: #030014;
+  font-size: small;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  color: white; }
+  footer .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    gap: 0.8rem; }
+    footer .footer-top .social-links {
+      display: flex;
+      gap: 0.9rem; }
+  footer .menu-navegacion {
+    margin: 0.5rem;
+    padding: 0.5rem; }
+    footer .menu-navegacion ul {
+      padding: 0;
+      gap: 0.5rem;
+      margin: 0;
+      display: flex;
+      flex-direction: column; }
+      footer .menu-navegacion ul li {
+        list-style: none; }
+  footer .menu-contactanos {
+    margin: 0.5rem;
+    padding: 0.5rem; }
+    footer .menu-contactanos ul {
+      padding: 0;
+      gap: 0.5rem;
+      margin: 0;
+      display: flex;
+      flex-direction: column; }
+      footer .menu-contactanos ul li {
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+        padding: 0px; }
+
 * {
   font-family: "Karla", sans-serif;
   padding: 0;
@@ -516,13 +563,6 @@ body {
   overflow-x: hidden; }
 
 /* estilos pie de pagina */
-footer {
-  background-color: #d4dfeb;
-  display: flex;
-  justify-content: space-around;
-  font-size: small;
-  border: 1px solid #fff; }
-
 * {
   margin: 0;
   padding: 0;
