@@ -36,20 +36,22 @@ footer {
       flex-direction: column;
       li {
         list-style: none;
-        transition: 1s ease-in-out;
         white-space: nowrap;
+        transition: 0.3s ease-in-out;
         a {
           text-decoration: none;
-          transition: 0.2s ease-in-out;
           color: #fff;
+          transition: 0.2s ease-in-out;
         }
       }
       li:hover {
-        transition: 0, 3s ease-in-out;
-        transform: scale(1, 3);
+        // transform: scaley(-2.4);
+        transform: scaleX(1.1);
+        transition: 0.3s ease-in-out;
       }
     }
   }
+
   .menu-contactanos {
     margin: 0.5rem;
     padding: 0.5rem;
