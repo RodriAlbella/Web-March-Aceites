@@ -62,17 +62,21 @@ header nav ul li:hover {
 
 .main-index {
   height: 50vh;
-  margin: 5px;
+  margin: 50px 10px 0px 10px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   .titulo-home {
     text-align: center;
-    margin: 1rem;
-    padding: 0;
+    margin: 0rem;
+    padding: 0rem;
   }
   .p-home {
     text-align: center;
-    margin: 2rem;
-    padding: 2rem;
+    margin: 0rem;
+    padding: 0em;
+    font-size: 20px;
   }
 }
 

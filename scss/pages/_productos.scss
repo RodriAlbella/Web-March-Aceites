@@ -125,7 +125,7 @@
   margin: 4rem 1.5rem 4rem 0;
   aside {
     text-align: start;
-    margin-top: 100px;
+    margin-top: 30px;
     p {
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       font-size: large;
@@ -141,17 +141,115 @@
 
 // estilos para tablet
 @media screen and (max-width: 1200px) {
-  .main-producto {
-    .contenedor {
-      display: grid;
-      column-gap: 2rem;
-      grid-template-columns: repeat(2, 300px);
+  body {
+    header {
+      .banner {
+        nav {
+          ul {
+            gap: 2rem;
+            li {
+              transform: none;
+              transition: none;
+            }
+            li:hover {
+              transform: none;
+              transition: none;
+            }
+          }
+          ul:hover li {
+            transform: none;
+            transition: none;
+          }
+        }
+      }
+    }
+    .main-producto {
+      .titulo-catalogo {
+        h1 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 20px;
+          text-align: start;
+          margin-bottom: 1rem;
+        }
+      }
+      .contenedor {
+        display: grid;
+        justify-content: center;
+        column-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        .producto {
+          opacity: 1;
+          transition: none;
+          .contenido {
+            h3 {
+              text-align: center;
+            }
+            p {
+              text-align: center;
+              padding: 0.5rem;
+              transition: none;
+              opacity: 1;
+              top: 2;
+              margin-bottom: 1rem;
+              color: black;
+              transform: none;
+              transform: translate(0);
+            }
+            p:hover {
+              opacity: 1;
+              transition: none;
+            }
+          }
+        }
+        .producto:hover {
+          transition: none;
+          transform: translateY(0px);
+          color: black;
+          opacity: 1;
+        }
+      }
+    }
+    .section-3 {
+      flex-direction: column;
+      aside {
+        margin: 1rem;
+      }
     }
   }
-  .section-3 {
-    flex-direction: column;
-    aside {
-      margin: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    .main-producto {
+      .titulo-catalogo {
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .contenedor {
+        display: flex;
+        flex-direction: column;
+        .producto {
+          display: flex;
+          flex-direction: row;
+          width: auto;
+          gap: 1rem;
+          .contenido {
+            padding: 0rem;
+          }
+          a {
+            margin: 1rem;
+          }
+        }
+      }
     }
   }
 }
