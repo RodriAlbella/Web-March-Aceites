@@ -110,6 +110,10 @@
       transition: 1.5s ease-in;
     }
   }
+  h2 {
+    font-size: 30px;
+    margin: 3rem 0 3rem 0;
+  }
 }
 
 /* estilos contenido secundario */
@@ -176,8 +180,8 @@
       }
       .contenedor {
         display: grid;
-        justify-content: center;
-        column-gap: 2rem;
+        place-items: center;
+        row-gap: 2rem;
         grid-template-columns: repeat(2, 1fr);
         .producto {
           opacity: 1;
@@ -209,6 +213,10 @@
           color: black;
           opacity: 1;
         }
+      }
+      h2 {
+        font-size: 20px;
+        margin-top: 3rem;
       }
     }
     .section-3 {
