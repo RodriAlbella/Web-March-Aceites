@@ -37,7 +37,7 @@
     <title>March Industria Argentina</title>
 </head>
 
-<body>
+<body class="body-contacto">
     <header>
         <div class="banner">
             <img src="/img march/Logo march.png"
@@ -59,52 +59,55 @@
         <img class="img-fondo" src="/img march/banner.jpg" alt="">
     </header>
     <main>
-        <div class="contacto">
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-
-                <input class="btn-enviar" type="submit" value="Enviar">
-            </form>
-            <div class="redes">
-                <h2>Contactanos</h2>
-                <p class="p-redes">Nos encanta mantenernos en contacto con nuestros clientes y visitantes. Si tienes
-                    alguna pregunta,
-                    comentario o sugerencia, ponte en contacto con nosotros. Envíanos un mensaje a través de nuestro
-                    formulario de contacto, correo electrónico o encontrarnos en las redes sociales. Estamos disponibles
-                    para responder tus preguntas y ayudarte en lo que necesites.</p>
-                <div class="facebook">
-                    <i class="fab fa-facebook-f"></i>
-                    <a href="https://www.facebook.com/" target="_blank">March Industria Argentina</a>
+        <section class="formulario">
+            <div class="contacto-formulario">
+                <div class="box-formulario">
+                    <div class="texto">
+                        <h2>Hablemos!</h2>
+                        <p>Te invitamos a recorrer nuestras redes sociales y enviarnos un mensaje!</p>
+                    </div>
+                    <form action="">
+                        <div class="inputbox">
+                            <label for="">Tu nombre</label>
+                            <input type="text" placeholder="Nombre..">
+                        </div>
+                        <div class="inputbox">
+                            <label for="">Tu mail</label>
+                            <input type="text" placeholder="Mail..">
+                        </div>
+                        <div class="inputbox">
+                            <label for="">Tu mensaje</label>
+                            <textarea name="" id="" cols="40" rows="6" placeholder="Mensaje.."></textarea>
+                        </div>
+                        <input class="submit" type="submit" value="Enviar Mensaje">
+                    </form>
                 </div>
-                <div class="instagram">
-                    <i class="fab fa-instagram"></i>
-                    <a href="https://https://www.instagram.com/march.industriaargentina/"
-                        target="_blank">march.industriaargentina</a>
-                </div>
-                <div class="gmail">
-                    <i class="far fa-envelope"></i>
-
-                    <a href="#" target="_blank">marchquimica@gmail.com</a>
-                </div>
-                <div class="whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <a href="#" target="_blank">
-                        0351 15-669-9243</a>
+                <div class="info">
+                    <div class="imgbox">
+                        <img src="../img march/imagen-contacto.png"
+                            alt="Ilustracion que decomra la pagina e contacto del sitio web">
+                    </div>
+                    <div class="texto-box">
+                        <div class="info-contacto">
+                            <ul>
+                                <li>
+                                    <i class="bi bi-telephone-fill fa-lg"></i>
+                                    <a href="">3515367890</a>
+                                </li>
+                                <li>
+                                    <i class="bi bi-envelope-at-fill fa-lg"></i>
+                                    <a href="">marchiquimica@gmail.com</a>
+                                </li>
+                                <li>
+                                    <i class="bi bi-geo-alt-fill fa-lg"></i>
+                                    <a href="">Tiserra 2105 - Mendiolaza - Cordoba</a>
+                                </li>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-        </div>
-
-
+        </section>
     </main>
-
 
     <footer>
         <div class="footer-top">
@@ -154,7 +157,10 @@
         </section>
 
     </footer>
-
+    <!-- doc iocons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- doc bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
         </script>

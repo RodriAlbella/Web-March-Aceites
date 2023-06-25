@@ -18,14 +18,14 @@ main {
 
   .puntos {
     display: $font-principal;
-    margin: 0.5rem;
+    margin: 2rem;
     justify-content: center;
     gap: 10rem;
 
     .locales {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: center;
       gap: 1rem;
       li {

@@ -44,15 +44,18 @@ header nav ul li:hover {
   color: white;
   transition: 0.3s ease-in-out; }
 
-main h1 {
-  text-align: center;
-  margin: 3rem; }
-
-main p {
-  text-align: center;
-  margin-left: 7rem;
-  margin-right: 7rem;
-  padding: 3rem; }
+.main-index {
+  height: 50vh;
+  margin: 5px;
+  padding: 10px; }
+  .main-index .titulo-home {
+    text-align: center;
+    margin: 1rem;
+    padding: 0; }
+  .main-index .p-home {
+    text-align: center;
+    margin: 2rem;
+    padding: 2rem; }
 
 section {
   height: 100%;
@@ -75,9 +78,9 @@ section {
       font-size: 15px;
       height: 30px;
       white-space: nowrap; }
-  section h3 {
+  section h2 {
     text-align: center;
-    margin-top: 3rem; }
+    margin-top: 1rem; }
 
 article {
   display: flex;
@@ -97,11 +100,11 @@ article {
   justify-content: center;
   border: 1.5px solid black; }
   .section-2 #carouselExampleRide {
-    width: 46.5%;
-    height: 100vh; }
+    width: 50%;
+    height: 50%; }
   .section-2 img {
     margin: 1.5rem;
-    height: 100vh; }
+    height: 100%; }
 
 .correo {
   display: flex;
@@ -125,12 +128,14 @@ article {
     height: 40px;
     width: 120px; }
 
-@media screen and (max-width: 768px) {
-  body .banner ul {
-    gap: 0.9rem; }
-    body .banner ul li {
-      font-size: small;
-      white-space: nowrap; }
+@media screen and (max-width: 1200px) {
+  body .banner {
+    gap: 0; }
+    body .banner ul {
+      gap: 0.5rem; }
+      body .banner ul li {
+        font-size: small;
+        white-space: nowrap; }
   body main h1 {
     font-size: large; }
   body main p {
@@ -160,8 +165,9 @@ article {
       height: 100%;
       justify-self: center; }
     body .section-2 img {
-      margin: 1rem;
-      height: 100vh; }
+      width: auto;
+      height: 90vh;
+      margin: auto; }
   body .correo {
     display: flex;
     flex-direction: row;
@@ -179,7 +185,7 @@ article {
     body .correo button {
       border-radius: 0.9rem; } }
 
-@media screen and (max-width: 768px) and (max-width: 550px) {
+@media screen and (max-width: 1200px) and (max-width: 600px) {
   /* estilos index */
   header .banner {
     display: grid;
@@ -269,66 +275,94 @@ article {
 * {
   font-family: "Karla", sans-serif; }
 
-main .titulo-catalogo {
-  text-align: center;
-  margin: 2rem;
-  overflow-x: hidden; }
-
-main h3 {
-  text-align: center;
-  margin: 20px;
-  font-family: sans-serif; }
-
-main p {
-  font-size: x-large; }
-
-main .contenedor {
-  width: 100%;
+.main-producto {
   display: flex;
-  justify-content: center;
-  font-family: sans-serif; }
-  main .contenedor .producto {
-    width: 300px;
-    margin: 10px;
-    padding: 1px;
-    border-radius: 6px;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  height: 100%; }
+  .main-producto .titulo-catalogo {
+    text-align: center;
+    margin: 2rem;
+    overflow-x: hidden; }
+  .main-producto h3 {
+    text-align: center;
+    margin: 5px;
+    font-family: sans-serif; }
+  .main-producto p {
+    font-size: x-large; }
+  .main-producto .contenedor {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    overflow: hidden;
-    background: #83c5c042;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    transition: all 400ms ease; }
-    main .contenedor .producto .contenido {
-      padding: 2px;
-      text-align: center; }
-      main .contenedor .producto .contenido h4 {
-        margin-bottom: 15px; }
-      main .contenedor .producto .contenido p {
-        color: #6a6a6a;
-        margin: 1.5px;
-        padding: 0;
-        line-height: 1.5;
-        font-size: medium; }
-    main .contenedor .producto a {
-      text-decoration: none;
-      display: inline-block;
-      padding: 10px;
-      margin-bottom: 10px;
-      color: #10282c;
-      border: 1px solid #10282c;
-      border-radius: 4px; }
-    main .contenedor .producto .producto a:hover {
-      background-color: #10282c;
-      color: #fff; }
-  main .contenedor .producto:hover {
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); }
-  main .contenedor .producto img {
-    width: 150px;
-    height: 150px; }
+    font-family: sans-serif; }
+    .main-producto .contenedor .producto {
+      width: 300px;
+      margin: 10px;
+      padding: 1px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      overflow: hidden;
+      background-image: linear-gradient(to bottom, #83c5c05a, #acbbba42);
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+      transition: all 2s ease; }
+      .main-producto .contenedor .producto .contenido {
+        padding: 2px;
+        text-align: center;
+        margin-bottom: 0; }
+        .main-producto .contenedor .producto .contenido h3 {
+          margin-bottom: 15px;
+          transition: 2s; }
+        .main-producto .contenedor .producto .contenido p {
+          color: #6a6a6a;
+          margin: 1.5px;
+          padding: 0;
+          line-height: 1.5;
+          font-size: medium;
+          position: relative;
+          opacity: 0;
+          transform: translatey(20px);
+          transition: 1s ease-in-out; }
+        .main-producto .contenedor .producto .contenido p:hover {
+          transform: translatey(-8px);
+          transition: 0.7s ease-in-out;
+          opacity: 1;
+          color: black; }
+      .main-producto .contenedor .producto a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px;
+        margin-bottom: 10px;
+        color: #10282c;
+        border: 1px solid #10282c;
+        border-radius: 4px;
+        opacity: 1; }
+      .main-producto .contenedor .producto a:hover {
+        background-color: #10282c;
+        color: white; }
+      .main-producto .contenedor .producto .producto a:hover {
+        background-color: #10282c;
+        color: #fff;
+        opacity: 1;
+        transition: 2s ease-in-out; }
+      .main-producto .contenedor .producto .producto a::before {
+        opacity: 1; }
+    .main-producto .contenedor .producto:hover {
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+      transform: translatey(-10px);
+      transition: 2s;
+      opacity: 0.5; }
+    .main-producto .contenedor .producto:hover h3 {
+      opacity: 0, 2;
+      transition: 2s; }
+    .main-producto .contenedor .producto img {
+      width: 150px;
+      height: 150px;
+      transition: 1.5s ease-in; }
 
 /* estilos contenido secundario */
 .section-3 {
@@ -353,90 +387,246 @@ main .contenedor {
         text-decoration: none;
         color: black; }
 
-main .contacto {
+@media screen and (max-width: 1200px) {
+  .main-producto .contenedor {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 300px); }
+  .section-3 {
+    flex-direction: column; }
+    .section-3 aside {
+      margin: 1rem; } }
+
+.body-contacto {
+  background-image: linear-gradient(to bottom, #1766a3, #e1e9f0); }
+
+main {
+  position: relative;
   width: 100%;
-  max-width: 1100px;
-  margin: auto;
+  height: 100vh;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 50px;
-  margin-top: 90px; }
-  main .contacto form input,
-  main .contacto form #mensaje {
-    width: 100%;
-    padding: 15px 10px;
-    font-size: 15px;
-    border: 1px solid black;
-    margin-bottom: 20px;
-    border-radius: 0.8rem;
-    outline: 0px; }
-  main .contacto form .text-area {
-    max-width: 530px;
-    min-width: 530px;
-    min-height: 140px;
-    max-height: 150px; }
-  main .contacto form .btn-enviar {
-    max-width: 100px;
-    min-height: 20px;
-    padding: 0.5rem;
-    font-size: 16px;
-    outline: 0px;
-    background-color: #84a59daa;
-    color: white;
-    border-radius: 0.4rem;
-    transition: all 300ms ease; }
-  main .contacto form .btn-enviar:hover {
-    background-color: #84a59dea; }
-  main .contacto .redes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.2rem;
-    margin-bottom: 5px; }
-    main .contacto .redes h2 {
-      margin: 0.2rem;
-      font-size: 30px;
-      text-align: center; }
-    main .contacto .redes .p-redes {
-      font-size: 17px;
-      line-height: 1.6;
-      margin: 2px;
-      padding: 0.8rem;
-      text-align: start; }
-    main .contacto .redes .facebook,
-    main .contacto .redes .instagram,
-    main .contacto .redes .gmail,
-    main .contacto .redes .whatsapp {
+  place-items: center; }
+  main .formulario {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20p;
+    padding: 10px;
+    height: 90%;
+    width: 1200px;
+    background-color: #9cdafa;
+    box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
+    border-radius: 30px; }
+    main .formulario .contacto-formulario {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 300px;
-      height: auto;
-      margin-right: 1rem;
-      border-radius: 10px;
-      background-color: #ccc;
-      color: #fff;
-      transition: background-color 0.3s ease-in-out;
-      gap: 14px; }
-      main .contacto .redes .facebook a,
-      main .contacto .redes .instagram a,
-      main .contacto .redes .gmail a,
-      main .contacto .redes .whatsapp a {
+      flex-direction: row;
+      margin-left: 30px; }
+      main .formulario .contacto-formulario .box-formulario {
+        display: flex;
+        flex-direction: column; }
+        main .formulario .contacto-formulario .box-formulario .texto {
+          min-width: 500px; }
+          main .formulario .contacto-formulario .box-formulario .texto h2 {
+            color: #1766a3;
+            margin-bottom: 10px;
+            text-align: start; }
+          main .formulario .contacto-formulario .box-formulario .texto p {
+            color: #0b426c;
+            font-size: 20px;
+            text-align: start;
+            line-height: 1.5;
+            margin: 20px; }
+        main .formulario .contacto-formulario .box-formulario form {
+          width: 70%; }
+          main .formulario .contacto-formulario .box-formulario form .inputbox {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px; }
+            main .formulario .contacto-formulario .box-formulario form .inputbox label {
+              color: #1766a3;
+              font-weight: 700;
+              text-align: start; }
+            main .formulario .contacto-formulario .box-formulario form .inputbox input,
+            main .formulario .contacto-formulario .box-formulario form .inputbox textarea {
+              gap: 10px;
+              border: none;
+              background-color: #cbebfb;
+              padding: 10px;
+              border-radius: 15px;
+              color: #1766a3; }
+          main .formulario .contacto-formulario .box-formulario form .submit {
+            background-color: #1766a3;
+            display: inline-block;
+            text-align: center;
+            width: 150px;
+            padding: 10px;
+            border-radius: 15px;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
+            transition: 0.6s; }
+          main .formulario .contacto-formulario .box-formulario form .submit:hover {
+            background-color: #1766a37a;
+            transition: 0.6s; }
+    main .formulario .info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 6rem; }
+      main .formulario .info .imgbox {
+        width: 150px;
+        height: 150px; }
+        main .formulario .info .imgbox img {
+          top: 0;
+          left: 0.7;
+          width: 300px;
+          height: 300px; }
+      main .formulario .info .texto-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        main .formulario .info .texto-box .info-contacto {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          margin-bottom: 10px; }
+          main .formulario .info .texto-box .info-contacto ul {
+            padding: 0;
+            gap: 0.5rem;
+            margin: 0;
+            display: flex;
+            flex-direction: column; }
+            main .formulario .info .texto-box .info-contacto ul li {
+              list-style: none;
+              display: flex;
+              gap: 0.5rem;
+              font-size: 20px;
+              padding: 0;
+              margin: 0;
+              background-color: transparent;
+              border: 0px; }
+              main .formulario .info .texto-box .info-contacto ul li a {
+                text-decoration: none;
+                color: black; }
+  main .contacto {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    margin-top: 90px; }
+    main .contacto form input,
+    main .contacto form #mensaje {
+      width: 100%;
+      padding: 15px 10px;
+      font-size: 15px;
+      border: 1px solid black;
+      margin-bottom: 20px;
+      border-radius: 0.8rem;
+      outline: 0px; }
+    main .contacto form .text-area {
+      max-width: 530px;
+      min-width: 530px;
+      min-height: 140px;
+      max-height: 150px; }
+    main .contacto form .btn-enviar {
+      max-width: 100px;
+      min-height: 20px;
+      padding: 0.5rem;
+      font-size: 16px;
+      outline: 0px;
+      background-color: #84a59daa;
+      color: white;
+      border-radius: 0.4rem;
+      transition: all 300ms ease; }
+    main .contacto form .btn-enviar:hover {
+      background-color: #84a59dea; }
+    main .contacto .redes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+      margin-bottom: 5px; }
+      main .contacto .redes h2 {
+        margin: 0.2rem;
+        font-size: 30px;
+        text-align: center; }
+      main .contacto .redes .p-redes {
+        font-size: 17px;
+        line-height: 1.6;
+        margin: 2px;
+        padding: 0.8rem;
+        text-align: start; }
+      main .contacto .redes .facebook,
+      main .contacto .redes .instagram,
+      main .contacto .redes .gmail,
+      main .contacto .redes .whatsapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: auto;
+        margin-right: 1rem;
+        border-radius: 10px;
         background-color: #ccc;
         color: #fff;
         transition: background-color 0.3s ease-in-out;
-        text-decoration: none; }
-      main .contacto .redes .facebook i,
-      main .contacto .redes .instagram i,
-      main .contacto .redes .gmail i,
-      main .contacto .redes .whatsapp i {
-        font-size: 1.2rem; }
+        gap: 14px; }
+        main .contacto .redes .facebook a,
+        main .contacto .redes .instagram a,
+        main .contacto .redes .gmail a,
+        main .contacto .redes .whatsapp a {
+          background-color: #ccc;
+          color: #fff;
+          transition: background-color 0.3s ease-in-out;
+          text-decoration: none; }
+        main .contacto .redes .facebook i,
+        main .contacto .redes .instagram i,
+        main .contacto .redes .gmail i,
+        main .contacto .redes .whatsapp i {
+          font-size: 1.2rem; }
 
-@media screen and (max-width: 768px) {
-  main .contacto {
-    max-width: 90vh;
-    display: flex;
-    flex-direction: column; } }
+@media screen and (max-width: 1200px) {
+  main .formulario {
+    width: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    main .formulario .contacto-formulario .info {
+      height: 300px;
+      padding: 20px; }
+      main .formulario .contacto-formulario .info .imgbox {
+        display: none; }
+      main .formulario .contacto-formulario .info .texto-box .info-contacto {
+        display: inline-block; }
+        main .formulario .contacto-formulario .info .texto-box .info-contacto ul {
+          gap: 3.5rem;
+          margin-bottom: 5rem; } }
+
+@media screen and (max-width: 600px) {
+  main .formulario {
+    height: 100vh; }
+    main .formulario .contacto-formulario {
+      height: 100%;
+      flex-direction: column;
+      height: 100%; }
+      main .formulario .contacto-formulario .info .texto-box .info-contacto ul {
+        gap: 1rem; }
+        main .formulario .contacto-formulario .info .texto-box .info-contacto ul li {
+          font-size: 20px; }
+      main .formulario .contacto-formulario .box-formulario form {
+        margin-left: 0px;
+        width: 100%; }
+    main .formulario .info {
+      margin-bottom: 30px; } }
+
+footer {
+  margin: auto; }
 
 /* estilos "punto de venta */
 main h2 {
@@ -453,13 +643,13 @@ main p {
 
 main .puntos {
   display: "Karla", sans-serif;
-  margin: 0.5rem;
+  margin: 2rem;
   justify-content: center;
   gap: 10rem; }
   main .puntos .locales {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 1rem; }
     main .puntos .locales li {
@@ -511,7 +701,7 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: auto;
+  height: 100%;
   background: #030014;
   font-size: small;
   border: 2px solid #fff;
@@ -527,6 +717,9 @@ footer {
     footer .footer-top .social-links {
       display: flex;
       gap: 0.9rem; }
+      footer .footer-top .social-links a {
+        text-decoration: none;
+        color: #fff; }
   footer .menu-navegacion {
     margin: 0.5rem;
     padding: 0.5rem; }
@@ -563,6 +756,33 @@ footer {
         footer .menu-contactanos ul li a {
           text-decoration: none;
           color: white; }
+
+@media screen and (max-width: 1200px) {
+  footer {
+    display: grid;
+    grid-template-areas: "footer-top menu-navegacion" "menu-contactanos footer-bottom"; }
+    footer .footer-top {
+      grid-area: footer-top; }
+      footer .footer-top img {
+        display: none; }
+      footer .footer-top span {
+        flex-direction: row; }
+    footer .menu-navegacion {
+      grid-area: menu-navegacion; }
+    footer .menu-contactanos {
+      grid-area: menu-contactanos; }
+    footer .footer-bottom {
+      grid-area: footer-bottom;
+      margin-top: 5rem; } }
+
+@media screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; }
+    footer .footer-bottom {
+      margin: 1rem; } }
 
 * {
   font-family: "Karla", sans-serif;
